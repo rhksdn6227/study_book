@@ -5,7 +5,7 @@ apply plugin: 'io.spring.dependency-management'
 
 buildscript {
     ext{
-        springBootVersion = '2.1.7.RELEASE'
+        springBootVersion = '2.3.11.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -28,4 +28,6 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile('org.projectlombok:lombok')
 }
