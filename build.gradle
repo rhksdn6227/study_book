@@ -5,7 +5,7 @@ apply plugin: 'io.spring.dependency-management'
 
 buildscript {
     ext {
-        springBootVersion = '2.3.11.RELEASE'
+        springBootVersion = '2.1.7.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -19,7 +19,6 @@ buildscript {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
