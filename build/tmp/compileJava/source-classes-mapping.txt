@@ -1,2 +1,0 @@
-com/kwan/springboot/Application.java
- com.kwan.springboot.Application
