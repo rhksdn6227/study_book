@@ -15,6 +15,7 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
+  - ls
   - zip -r study_book
   - mkdir -p deploy
   - mv study_book.zip deploy/study_book.zip
