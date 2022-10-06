@@ -24,8 +24,8 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket: kwan-springboot-build
-    region: ap-northeast-2
+    bucket: kwan-springboot-build2
+    region: ap-northeast-1
     skip_cleanup: true
     acl: private
     local_dir: deploy
@@ -35,7 +35,9 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket: kwan-springboot-build
+    bucket: kwan-springboot-build2
+    bucket-region:
+
     key: study_book.zip
 
     bundle_type: zip
