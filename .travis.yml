@@ -43,7 +43,7 @@ deploy:
 
     deployment_group: kwan-springboot2-webservice-group
 
-    region: ap-northeast-2
+    region: ap-northeast-1
     wait-until-deployed: true
 
 
