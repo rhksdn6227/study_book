@@ -20,6 +20,21 @@ before_deploy:
   - mv study_book.zip deploy/study_book.zip
 
 deploy:
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: kwan-springboot-build
+    key: study_book.zip
+
+    bundle_type: zip
+    application: kwan-codedeploy
+
+    deployment_group: kwan-springboot2-webservice-group
+
+    region: ap-northeast-2
+    wait-until-deployed: true
+
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
