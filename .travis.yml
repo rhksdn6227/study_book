@@ -15,9 +15,14 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r study_book *
-  - mkdir -p deploy
-  - mv study_book.zip deploy/study_book.zip
+  - mkdir -p before-deploy
+  - cp scripts/*.sh before-deploy/
+  - cp appspec.yml before-deploy/
+  - cp build/libs/*.jar before-deploy/
+  - cd before-deploy/ && zip -r study_book *
+  - cd ../ && mkdir -p deploy
+  - mv before-deploy/study_book.zip deploy/study_book.zip
+
 
 deploy:
   - provider: s3
