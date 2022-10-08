@@ -2,8 +2,7 @@
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
-echo ">>>>> ${ABSDIR}"
-source $(ABSDIR)/profile.sh
+source ${ABSDIR}/profile.sh
 
 REPOSITORY=/home/ec2-user/app/step3
 PROJECT_NAME=kwan-springboot2-webservice
